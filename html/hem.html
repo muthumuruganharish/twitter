@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Match Validation</title>
+    <style>
+        #message {
+            color: red;
+            font-size: 14px;
+        }
+        .match {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" oninput="validatePassword()">
+    
+    <br><br>
+
+    <label for="confirm-password">Confirm Password:</label>
+    <input type="password" id="confirm-password" oninput="validatePassword()">
+    
+    <br><br>    
+
+    <span id="message"></span>
+
+    <script>
+        function validatePassword() {
+            let password = document.getElementById("password").value;
+            let confirmPassword = document.getElementById("confirm-password").value;
+            let message = document.getElementById("message");
+
+            if (confirmPassword.length === 0) {
+                message.textContent = "";
+                return;
+            }
+
+            if (password === confirmPassword) {
+                message.textContent = "Passwords match ✅";
+                message.classList.add("match");
+                message.classList.remove("mismatch");
+            } else {
+                message.textContent = "Passwords do not match ❌";
+                message.classList.add("mismatch");
+                message.classList.remove("match");
+            }
+        }
+    </script>
+
+</body>
+</html>
