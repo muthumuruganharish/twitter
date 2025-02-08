@@ -1,0 +1,225 @@
+body {
+    background-color: black;
+}
+/*-------------------------------------------------- loginin (main div)-------------------------------------------------------------------------------------*/
+.login {
+    display: flex; /* Align items to the center */
+    justify-content: center;
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full height of the viewport */
+}
+/*-------------------------------------------------- fa-brands fa-x-twitter (head)-------------------------------------------------------------------------------------*/
+
+.fa-x-twitter, .head {
+    position: absolute; 
+    color: white;
+    animation: slide-down 1s ease-out forwards; /* Apply slide-down animation */
+}
+
+
+.fa-x-twitter {
+    top: 8%; /* Moves it to the middle of the page vertically */
+    left: 100%; /* Aligns it to the left corner */
+    font-size: 30px;
+}
+ 
+.head {
+    top: 2%;
+}
+/*-------------------------------------------------- fa-brands fa-x-twitter (head end)-------------------------------------------------------------------------------------*/
+
+
+@keyframes slide-in {
+    from {
+        transform: translateX(-100%); /* Start slightly left */
+        opacity: 0; /* Start with some opacity */
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-100%);
+        opacity: 0.5;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+/*--------------------------------------------------  container (sub div of login )-------------------------------------------------------------------------------------*/
+
+.container {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    border-radius: 7px;
+    padding: 70px; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    animation: slide-in 1s ease-out forwards; 
+}
+/*------------------adds form because it changes the alignment so we set everything 0 and set property like login-----------------------------------------------------------*/
+form {
+    margin: 0;
+    padding: 0; 
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    width: 100%; 
+}
+
+
+.container input {
+    background-color: transparent;
+    color: white;
+    border-radius: 10px;
+    margin: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 80%; }
+.container input:hover{
+   background-color:aliceblue;
+   color:black
+}
+.sign {
+    background-color: white;
+    color: black;
+    padding-left: 120px;
+    padding-right: 120px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none; 
+    border-radius: 20px; 
+    cursor: pointer; 
+}
+.sign:hover{
+    background-color: lightgray;
+    color: black;
+    padding-left: 120px;
+    padding-right: 120px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer; 
+}
+.forgot:hover{
+    background-color: black;
+    color: white;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer; 
+    border: 2px solid gray;
+}
+.forgot{
+    margin-top: 20px;
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+   padding-left: 100px;
+   padding-right: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+    border-radius: 20px; 
+    cursor: pointer; 
+
+}
+a{
+    color: white;
+}
+
+/*--------------------------------------------------  container (sub div of login end)-------------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------- loginin (main div end)-------------------------------------------------------------------------------------*/
+
+
+/*-------------------------------------------------- already (new.html  div)-------------------------------------------------------------------------------------*/
+
+.already p{
+    margin: 0;
+   
+}
+.already a{
+    margin-left: 5px;
+}
+.already{
+    margin-top: 10px;
+    display: flex;
+    
+}
+/*-------------------------------------------------- already (  div end)-------------------------------------------------------------------------------------*/
+
+
+/*-------------------------------------------------- input1 ( div )-------------------------------------------------------------------------------------*/
+.input1.error input{
+    border-color: red;
+}
+.input1.sucess input{
+    border-color: white;
+}
+
+/*-------------------------------------------------- input1 ( button )-------------------------------------------------------------------------------------*/
+
+.create {
+    background-color: white;
+    color: black;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none; 
+    border-radius: 20px; 
+    cursor: pointer; 
+    margin-top: 10px;
+}
+.create:hover{
+    background-color: lightgray;
+    color: black;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer; 
+}
+#message {
+    color: red;
+    font-size: 14px;
+    position: absolute;
+    margin-bottom: 10px;
+}
+.match {
+    color: green;
+}
+/* --------------------------------responsive--------------------------------------------------------------------------------------*/
+@media (max-width: 1200px) {
+    .head {
+        position: absolute; /* Change from absolute to relative positioning */
+        margin-bottom: 20px; /* Add some margin for spacing */
+    }
+
+    .container {
+        padding: 30px; /* Adjust padding for smaller screens */
+    }
+    .container input {
+        background-color: transparent;
+        color: white;
+        border-radius: 10px;
+        margin: 10px;
+        padding-left: 40px;
+        padding-right: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 80%; }
+        .container input:hover{
+            background-color:aliceblue;
+            color:black
+         }
+}
